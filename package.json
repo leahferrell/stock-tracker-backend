@@ -19,15 +19,16 @@
     "qs": "^6.9.6"
   },
   "devDependencies": {
+    "husky": "^5.1.1",
     "nodemon": "^2.0.7",
     "prettier": "2.2.1"
   },
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"**/*": "prettier --write --ignore-unknown"
-	}
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }
