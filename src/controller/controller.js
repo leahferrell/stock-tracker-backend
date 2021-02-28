@@ -1,18 +1,18 @@
-const { quotesService } = require('../service/td/quotes/quotes-service')
+const { quotesService } = require("../service/td/quotes/quotes-service");
 
 const controller = {
-	getQuote: async (req, res) => {
-		const quote = await quotesService.getQuote(req.params.symbol)
+  getQuote: async (req, res) => {
+    const quote = await quotesService.getQuote(req.params.symbol);
 
-		res.send(quote)
-	},
-	getQuotes: async (req, res) => {
-		const symbols = req.query.symbol ? req.query.symbol.split(',') : []
+    res.send(quote);
+  },
+  getQuotes: async (req, res) => {
+    const symbols = req.query.symbol ? req.query.symbol.split(",") : [];
 
-		const quotes = await quotesService.getQuotes(symbols)
+    const quotes = await quotesService.getQuotes(symbols);
 
-		res.send(quotes)
-	}
-}
+    res.send(quotes);
+  },
+};
 
-module.exports = controller
+module.exports = controller;

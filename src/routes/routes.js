@@ -1,10 +1,10 @@
-const Router = require('express')
+const Router = require("express");
 
-const controller = require('../controller/controller')
+const controller = require("../controller/controller");
 
-const router = Router()
+const router = Router();
 
-router.get('/:symbol/quotes', controller.getQuote)
-router.get('/quotes', controller.getQuotes)
+router.get("/:symbol/quotes", controller.getQuote);
+router.get("/quotes", controller.getQuotes);
 
-module.exports = router
+module.exports = router;
