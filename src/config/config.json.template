@@ -3,6 +3,18 @@
     "server": {
       "port": "3000"
     },
+    "reddit": {
+      "uri": {
+        "oauth2": "https://www.reddit.com/api/v1/access_token"
+      },
+      "oauth2": {
+        "clientId": "",
+        "clientSecret": "",
+        "username": "",
+        "password": "",
+        "redirectUri": ""
+      }
+    },
     "td": {
       "uri": {
         "oauth2": "https://api.tdameritrade.com/v1/oauth2/token",

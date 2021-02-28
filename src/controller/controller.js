@@ -1,4 +1,5 @@
 const { quotesService } = require("../service/td/quotes/quotes-service");
+const { redditAuthService } = require("../service/reddit/auth/auth");
 
 const controller = {
   getQuote: async (req, res) => {
@@ -13,6 +14,9 @@ const controller = {
 
     res.send(quotes);
   },
+	test: async (req, res) => {
+  	res.send(await redditAuthService.getBearerToken())
+	}
 };
 
 module.exports = controller;
