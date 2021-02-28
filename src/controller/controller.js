@@ -14,9 +14,9 @@ const controller = {
 
     res.send(quotes);
   },
-	test: async (req, res) => {
-  	res.send(await redditAuthService.getBearerToken())
-	}
+  test: async (req, res) => {
+    res.send(await redditAuthService.getBearerToken());
+  },
 };
 
 module.exports = controller;
