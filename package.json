@@ -22,14 +22,12 @@
     "husky": "^5.1.1",
     "lint-staged": "^10.5.4",
     "nodemon": "^2.0.7",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   }
 }
