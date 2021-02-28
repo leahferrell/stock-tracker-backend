@@ -4,6 +4,7 @@ const controller = require('../controller/controller')
 
 const router = Router()
 
-router.get('/', controller.testEndpoint)
+router.get('/:symbol/quotes', controller.getQuote)
+router.get('/quotes', controller.getQuotes)
 
 module.exports = router

@@ -1,10 +1,17 @@
-const { authService } = require('../service/td/auth/auth')
+const { quotesService } = require('../service/td/quotes/quotes-service')
 
 const controller = {
-	testEndpoint: async (req, res) => {
-		const authToken = await authService.getBearerToken()
+	getQuote: async (req, res) => {
+		const quote = await quotesService.getQuote(req.params.symbol)
 
-		res.send(authToken)
+		res.send(quote)
+	},
+	getQuotes: async (req, res) => {
+		const symbols = req.query.symbol ? req.query.symbol.split(',') : []
+
+		const quotes = await quotesService.getQuotes(symbols)
+
+		res.send(quotes)
 	}
 }
 

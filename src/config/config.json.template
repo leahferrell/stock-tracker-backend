@@ -1,19 +1,20 @@
 {
-	"default": {
-	  "server": {
-  		"port": "3000"
-  	},
-		"td": {
-			"uri": {
-				"oauth2": "https://api.tdameritrade.com/v1/oauth2/token",
-				"auth": "https://auth.tdameritrade.com/auth"
-			},
-			"oauth2": {
-				"encodedAuthToken": "",
-				"refreshToken": "",
-				"redirectUri": "",
-				"consumerKey": ""
-			}
-		}
-	}
+  "default": {
+    "server": {
+      "port": "3000"
+    },
+    "td": {
+      "uri": {
+        "oauth2": "https://api.tdameritrade.com/v1/oauth2/token",
+        "auth": "https://auth.tdameritrade.com/auth",
+        "marketdata": "https://api.tdameritrade.com/v1/marketdata"
+      },
+      "oauth2": {
+        "encodedAuthToken": "",
+        "refreshToken": "",
+        "redirectUri": "",
+        "consumerKey": ""
+      }
+    }
+  }
 }
